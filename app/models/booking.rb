@@ -4,7 +4,7 @@ class Booking < ActiveRecord::Base
   after_create :assign_driver
 
   STATUS = { :pending => 0, :accepted => 1, :deleted => 2 }
-  TAXI_DISPATCHER_URL = "http://localhost:4000/api/drivers/assign_driver" #this will depend on the actual apil url
+  TAXI_DISPATCHER_URL = "http://localhost:4000/api/drivers/assign_driver" #this will depend on the actual api url
  
   class << self
     def create_booking(user, booking)
